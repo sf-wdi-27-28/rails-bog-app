@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+/*
+ * app/assets/stylesheets/application.css
+ */
+
+/*
+ * ...
+ *
+ *= require bootsrap-3.3.6.min
+ *= require_tree .
+ *= require_self
+ */
