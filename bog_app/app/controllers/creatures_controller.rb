@@ -12,10 +12,8 @@ class CreaturesController < ApplicationController
   def create
   # whitelist params and save them to a variable
   creature_params = params.require(:creature).permit(:name, :description)
-
   # create a new creature from `creature_params`
   creature = Creature.new(creature_params)
-
   # if creature saves, redirect to route that displays all creatures
   if creature.save
     redirect_to creature_path(creature)
@@ -26,5 +24,14 @@ class CreaturesController < ApplicationController
   def show
     @creature = Creature.find(params[:id])
     render :show
+  end
+  def edit
+  # get the creature id from the url params
+  creature_id = params[:id]
+  # use `creature_id` to find the creature in the database
+  # and save it to an instance variable
+  @creature = Creature.find_by_id(creature_id)
+  # render the edit view (it has access to instance variable)
+  render :edit
   end
 end

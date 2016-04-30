@@ -1,0 +1,5 @@
+<%= form_for @creature do |creature| %>
+<%= creature.text_field :name %>
+<%= creature.text_area :description  %>
+<%= creature.submit "SaveCreature" %>
+<% end %>
