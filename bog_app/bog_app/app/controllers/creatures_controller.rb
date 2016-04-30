@@ -23,4 +23,18 @@ class CreaturesController < ApplicationController
     render :show
 
   end
+
+  def create
+    #whitelist params and save to a variable
+    creature_params = params.require(:creature).permit(:name, :description)
+    # create a new creature from `creature_params`
+    creature = Creature.new(creature_params)
+    #if creature saves, redirect to route that display
+    # ONLY the newly created creature
+    if creature.save
+      redirect_to creature_path(creature)
+      # redirect_to creature_path(creature) is equivalent to:
+        # redirect_to "/creatures/#{creature.id}"
+    end
+  end
 end
