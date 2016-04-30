@@ -12,5 +12,15 @@ class CreaturesController < ApplicationController
     render :new
   end
 
-  
+  def show
+    #gets creature id from url params
+    creature_id = params[:id]
+
+    #use the `creature_id` to find the creature in db
+    #save it to an instance variable
+    @creature = Creature.find_by_id(creature_id)
+
+    render :show
+
+  end
 end
