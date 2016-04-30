@@ -34,4 +34,11 @@ class CreaturesController < ApplicationController
   # render the edit view (it has access to instance variable)
   render :edit
   end
+  def update
+    creature_id=params[:id]
+    creature_params=params.require(:creature).permit(:name,:description)
+    @creature=Creature.find(creature_id)
+    @creature.update(creature_params)
+    redirect_to creature_path(@creature)
+  end
 end
