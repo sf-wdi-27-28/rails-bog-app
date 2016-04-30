@@ -5,4 +5,9 @@ class CreaturesController < ApplicationController
     #render the creatures to view
     render :index
   end
+
+  def new
+    render :new
+  end
+  
 end
