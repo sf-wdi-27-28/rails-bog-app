@@ -3,4 +3,8 @@ class CreaturesController < ApplicationController
     @creatures = Creature.all #get all creatures from db and save to instance variable
     render :index #render the index view (it has access to instance variable)
   end
+  def new
+    render :new
+  end
+
 end
