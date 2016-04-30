@@ -6,8 +6,11 @@ class CreaturesController < ApplicationController
     render :index
   end
 
+  # show the new creature form
   def new
+    @creature = Creature.new
     render :new
   end
+
   
 end
