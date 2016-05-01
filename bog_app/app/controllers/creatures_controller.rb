@@ -6,6 +6,7 @@ class CreaturesController < ApplicationController
   end
 
   def new
+    @creature = Creature.new
     render :new
   end
 
@@ -14,8 +15,13 @@ class CreaturesController < ApplicationController
     creature = Creature.new(creature_params)
 
     if creature.save
-      redirect_to "/creatures"
+      redirect_to creature_path(creature)
     end
+  end
 
+  def show
+    creature_id = params[:id]
+    @creature = Creature.find_by_id(creature_id)
+    render :show
   end
 end
