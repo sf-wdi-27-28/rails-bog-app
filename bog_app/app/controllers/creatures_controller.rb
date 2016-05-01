@@ -31,6 +31,17 @@ class CreaturesController < ApplicationController
 
     #render the show view (it has access to the instance variable)
     render :show
-
   end
+  def edit
+    # get the creature id fromthe url params
+    creature_id = params[:id]
+
+    #use 'creature_id' to find the creature in the database
+    #and save it to an instance variable
+    @creature = Creature.find_by_id(creature_id)
+
+    #render the edit view (it has access to instance variable)
+    render :edit
+  end
+  
 end
