@@ -13,10 +13,18 @@ class CreaturesController < ApplicationController
     redirect_to creatures_path
   end
 
+  def show
+    @creature = Creature.find(creature_id)
+  end
+
   private
 
   def creature_params
     params.require(:creature).permit(:name, :description)
   end
-  
+
+  def creature_id
+    params[:id]
+  end
+
 end
