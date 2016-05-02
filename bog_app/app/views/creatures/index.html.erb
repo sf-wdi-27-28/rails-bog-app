@@ -1,0 +1,15 @@
+<% @creatures.each do |creature| %>
+  <div class = "row">
+    <h2><%= creature.name %></h2>
+  </div>
+  <div class = "row">
+    <p><em><%= creature.description %></em></p>
+  </div>
+  <div class = "row">
+    <hr />
+  </div>
+<% end %>
+
+<div class = "row">
+  <%= button_to "Create new creature", new_creature_path, method: "get", class: "btn btn-info" %>
+</div>
