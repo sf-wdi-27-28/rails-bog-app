@@ -1,10 +1,11 @@
-<h1>Creatures</h1>
+<h1><%= link_to "Creatures", creatures_path %></h1>
 <hr>
 
 <% @creatures.each do |c| %>
 <p>
   <strong>Name: </strong><%= c.name %>
   <strong>Description: </strong> <%= c.description %>
+  <%= link_to "Edit creature", edit_creature_path(c.id), class: "btn btn-primary"%>
 </p>
 <hr>
 <% end %>
