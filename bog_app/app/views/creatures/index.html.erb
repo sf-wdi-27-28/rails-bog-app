@@ -1,7 +1,7 @@
 <%= link_to "Create New Creature", new_creature_path %>
 <% @creatures.each do |creature| %>
   <p>
-    <strong>Name:</strong><%= creature.name %><br>
+    <strong>Name:</strong><%= link_to creature.name, creature_path(creature)%><br>
     <strong>Description:</strong> <%= creature.description %>
   </p>
 <% end %>
