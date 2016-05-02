@@ -1,0 +1,11 @@
+<h1><%= link_to "Creating a new creature", creatures_path %></h1>
+<hr>
+
+<div class="col-md-6 col-md-offset-3">
+<%= form_for @creature, url:"/creatures", method: "post" do |f| %>
+  <strong>Name: </strong><%= f.text_field :name, class:"form-control"%>
+  <strong>Description: </strong> <%= f.text_area :description, class:"form-control" %>
+  <%= f.submit "Create", class:"btn btn-primary" %>
+  <%= link_to "Back", creatures_path, class: "btn btn-default" %>
+<% end %>
+</div>
