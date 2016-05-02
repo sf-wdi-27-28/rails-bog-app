@@ -1,4 +1,8 @@
 class CreaturesController < ApplicationController
+  def root
+    render :root
+  end
+
   def index
     @creatures = Creature.all
   end
