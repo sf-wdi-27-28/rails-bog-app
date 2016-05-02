@@ -8,6 +8,8 @@
 <% @creatures.each do |creature| %>
   <p><strong>Name:</strong><br><%= creature.name %></p>
   <p><strong>Description:</strong><br><%= creature.description %></p>
+  <p><%= link_to "Creature Info", creature_path(creature), class: "btn btn-warning btn-lg" %></p>
+  <br>
   <br>
   <br>
 <% end %>
