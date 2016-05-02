@@ -9,7 +9,30 @@
  *= require_tree .
  *= require_self
  */
-
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+h4{
+  text-align: left;
+}
  body{
    background-color: yellow;
  }
+ .creatureView{
+   display: flex;
+   flex-direction: column;
+   margin-left: 20px;
+   margin-bottom: 20px;
+
+ }
+.eachCreatureInfo{
+  background-color: springgreen;
+}
+.newCreature{
+  background-color: #CCCCFF;
+  font-weight: bolder;
+  font:lucida;
+}

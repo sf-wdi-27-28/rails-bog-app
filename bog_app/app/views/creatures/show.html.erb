@@ -1,4 +1,6 @@
+<div class="eachCreatureInfo">
 <h3><%= @creature.name %></h3>
-  <p><%=  @creature.description %></p>
+  <h5><%=  @creature.description %></h5>
   <!-- Add delete button -->
-  <%= button_to "Delete", @creature, method: :delete %><hr>
+  <%= button_to "DELETE", @creature, method: :delete %><hr>
+</div>
