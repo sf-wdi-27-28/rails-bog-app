@@ -6,6 +6,7 @@
   <strong>Name: </strong><%= c.name %>
   <strong>Description: </strong> <%= c.description %>
   <%= link_to "Edit creature", edit_creature_path(c.id), class: "btn btn-primary"%>
+  <%= button_to "Delete", delete_creature_path(c.id), method: :delete, class: "btn btn-danger" %>
 </p>
 <hr>
 <% end %>
