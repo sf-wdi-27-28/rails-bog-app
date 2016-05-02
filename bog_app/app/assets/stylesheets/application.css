@@ -1,0 +1,47 @@
+/*
+ * app/assets/stylesheets/application.css
+ */
+
+/*
+ * ...
+ *
+ *= require bootstrap-3.3.6.min
+ *= require_tree .
+ *= require_self
+ */
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+h4{
+  text-align: left;
+}
+ body{
+   background-color: yellow;
+ }
+ .card{
+  width: 400px;
+  font-size: 20px;
+  border: 1px solid gray;
+  box-shadow: 8px 8px 4px #888;
+  border-top: 20px solid black;
+  min-width: 100px;
+  min-height: 150px;
+  padding-: 10px;
+  margin: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+
+ }
+.eachCreatureInfo{
+  background-color: springgreen;
+}
+.newCreature{
+  background-color: #CCCCFF;
+  font-weight: bolder;
+  font:lucida;
+}

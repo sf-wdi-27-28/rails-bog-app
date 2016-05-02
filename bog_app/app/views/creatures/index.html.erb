@@ -1,0 +1,10 @@
+<h1>Welcome to StarWars creature Bog-App</h1><hr>
+
+    <% @creatures.each do |creature| %>
+        <div class="card">
+          <strong>Name:</strong> <%= creature.name %><br>
+          <strong>Description:</strong> <%= creature.description %><br>
+          <!-- Add delete button -->
+          <%= button_to "DELETE", @creature, method: :delete %>
+        </div>
+    <% end %>

@@ -1,0 +1,10 @@
+<h2>Create A New Star Wars Creature<h2>
+<div class="newCreature">
+  <h4>
+    <%= form_for @creature do |f| %>
+      Enter creature name:         <%= f.text_field :name %><hr>
+      Enter creature description:  <%= f.text_area :description %><hr>
+      <%= f.submit "SAVE" %>
+    <% end %>
+  </h4>
+</div>
