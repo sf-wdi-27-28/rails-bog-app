@@ -1,11 +1,11 @@
 <h1>Welcome to StarWars creature list</h1><hr>
 <div>
     <% @creatures.each do |creature| %>
-        <div class="creatureView">
+        <div class="card">
           <strong>Name:</strong> <%= creature.name %><br>
           <strong>Description:</strong> <%= creature.description %>
           <!-- Add delete button -->
-          <%= button_to "DELETE", @creature, method: :delete %><hr>
+          <%= button_to "DELETE", @creature, method: :delete %>
         </div>
 
       <% end %>

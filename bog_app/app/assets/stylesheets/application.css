@@ -21,11 +21,18 @@ h4{
  body{
    background-color: yellow;
  }
- .creatureView{
-   display: flex;
-   flex-direction: column;
-   margin-left: 20px;
-   margin-bottom: 20px;
+ .card{
+  width: 350px;
+  border: 1px solid gray;
+  box-shadow: 8px 8px 4px #888;
+  border-top: 20px solid black;
+  min-width: 100px;
+  min-height: 150px;
+  padding-: 10px;
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
 
  }
 .eachCreatureInfo{
