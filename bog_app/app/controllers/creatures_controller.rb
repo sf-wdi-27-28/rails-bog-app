@@ -12,7 +12,7 @@ class CreaturesController < ApplicationController
     creature_params = params.require(:creature).permit(:name, :description)
     creature = Creature.new(creature_params)
     if creature.save
-      redirect_to creatures_path
+      redirect_to creature_path(creature)
     end
   end
 
@@ -20,4 +20,15 @@ class CreaturesController < ApplicationController
     @creature = Creature.find(params[:id])
   end
 
+  def edit
+    @creature = Creature.find(params[:id])
+  end
+
+  def update
+    creature = Creature.find(params[:id])
+    creature_params = params.require(:creature).permit(:name, :description)
+    creature = Creature.new(creature_params)
+    creature.update(creature_params)
+    redirect_to creature_path(creature)
+  end
 end
