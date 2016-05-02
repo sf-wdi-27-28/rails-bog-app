@@ -13,6 +13,8 @@
     <h4>
       <strong>Description: </strong> <%= creature.description %>
     </h4>
+
+    <%= link_to "Show This Creature", creature_path(creature.id) %>
   <% end %>
 
 </div>
