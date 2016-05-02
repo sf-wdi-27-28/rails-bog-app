@@ -1,5 +1,5 @@
 <h1>Welcome to StarWars creature Bog-App</h1><hr>
-<div>
+
     <% @creatures.each do |creature| %>
         <div class="card">
           <strong>Name:</strong> <%= creature.name %><br>
@@ -7,6 +7,4 @@
           <!-- Add delete button -->
           <%= button_to "DELETE", @creature, method: :delete %>
         </div>
-
-      <% end %>
-</div>
+    <% end %>

@@ -22,7 +22,8 @@ h4{
    background-color: yellow;
  }
  .card{
-   font-size: 24px;
+  width: 400px;
+  font-size: 20px;
   border: 1px solid gray;
   box-shadow: 8px 8px 4px #888;
   border-top: 20px solid black;
