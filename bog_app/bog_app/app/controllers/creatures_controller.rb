@@ -32,6 +32,7 @@ class CreaturesController < ApplicationController
       redirect_to creature_path(creature)
       # this redirects_to "/creatures"
     end
+  end
 
     def edit
 
@@ -58,8 +59,20 @@ class CreaturesController < ApplicationController
 
       redirect_to creature_path(creature)
 
+    end
 
+    def destroy
+
+      creature_id = params[:id]
+
+      @creature = Creature.find_by_id(creature_id)
+
+      #destroy is a ruby/rails method that will delete te creature selected
+      creature.destroy
+
+      redirect_to creatures_path
 
     end
-  end
+
+
 end
