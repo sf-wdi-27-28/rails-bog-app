@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default navbar-fixed top">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -16,7 +16,7 @@
     <p>
       <strong>Name:</strong><%= image_tag creature.image.url(:thumb) %><br>
       <strong>Name:</strong> <%= creature.name %><br>
-      <strong>Description:</strong> <%= creature.description %> 
+      <strong>Description:</strong> <%= creature.description %>
     </p>
     <%= link_to "<button>Show</button>".html_safe, creature_path(creature), :id => "button_id", :class => "button_class" %>
     <%= link_to "<button>Edit</button>".html_safe, edit_creature_path(creature), :id => "button_id", :class => "button_class" %>
