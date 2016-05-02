@@ -4,6 +4,16 @@
 <br>
 <br>
 <%= form_for @creature do |f| %>
+  <% if @creature.errors.any? %>
+  <div id="error_explanation">
+   <h2><%= pluralize(@creature.errors.count, "error") %> :</h2>
+   <ul>
+   <% @creature.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+  </div>
+  <% end %>
   <p><%= f.text_field :name, placeholder: "enter creature name" %></p>
   <p><%= f.text_area :description, placeholder: "enter creature description" %></p>
   <p><%= f.submit "Save Creature", class: "btn btn-success" %></p>
