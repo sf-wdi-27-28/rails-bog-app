@@ -24,4 +24,25 @@ class CreaturesController < ApplicationController
     render :show
   end
 
+  def edit
+    id = params[:id]
+    @creature = Creature.find_by_id(id)
+    render :edit
+  end
+
+  def update
+    id = params[:id]
+    creature = Creature.find_by_id(id)
+    cparams = params.require(:creature).permit(:name, :description)
+    creature.update_attributes(cparams)
+    redirect_to creature_path(creature)
+  end
+
+  def destroy
+    id = params[:id]
+    creature = Creature.find_by_id(id)
+    creature.destroy
+    redirect_to creatures_path
+  end
+
 end
