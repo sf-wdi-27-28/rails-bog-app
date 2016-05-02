@@ -13,9 +13,12 @@ class CreaturesController < ApplicationController
   def create
     @creature = Creature.create(creature_params)
     redirect_to creatures_path
-
   end
 
+  def show
+    @creature = Creature.find(params[:id])
+    render :show
+  end
 
 
   private
