@@ -4,7 +4,8 @@
   <p>
     <strong>Description:</strong> <%= @creature.description %>
   </p>
-  <%= link_to "Edit", edit_creature_path %> | Delete
+  <%= link_to "Edit", edit_creature_path %> |
+  <%= link_to "Delete", @creature, method: :delete %> 
 </div>
 <div class="col-sm-6 col-sm-offset-3">
   <%= link_to "Back", creatures_path %>
