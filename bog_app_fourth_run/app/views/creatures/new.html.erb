@@ -1,0 +1,14 @@
+<br>
+<br>
+<h3>CREATE A NEW CREATURE</h3>
+<br>
+<br>
+<%= form_for @creature do |f| %>
+  <p><%= f.text_field :name, placeholder: "enter creature name" %></p>
+  <p><%= f.text_area :description, placeholder: "enter creature description" %></p>
+  <p><%= f.submit "Save Creature", class: "btn btn-success" %></p>
+<% end %>
+<br>
+<br>
+<br>
+<%= link_to "Home", creatures_path, class: "btn btn-info btn-lg" %>
