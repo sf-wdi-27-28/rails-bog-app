@@ -10,11 +10,21 @@ class CreaturesController < ApplicationController
 
   def create
     Creature.create(creature_params)
-    redirect_to creatures_path
+    redirect_to creature_path
   end
 
   def show
     @creature = Creature.find(creature_id)
+  end
+
+  def edit
+    @creature = Creature.find(creature_id)
+  end
+
+  def update
+    @creature = Creature.find(creature_id)
+    @creature.update(creature_params)
+    redirect_to creature_path
   end
 
   private
