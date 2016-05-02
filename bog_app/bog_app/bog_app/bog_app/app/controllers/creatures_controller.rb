@@ -20,6 +20,20 @@ class CreaturesController < ApplicationController
     render :show
   end
 
+  def edit
+    @creature = Creature.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @creature = Creature.find(params[:id])
+    if @creature.update(creature_params)
+      redirect_to creature_path
+    else
+      redirect_to edit_creature_path
+    end
+  end
+
 
   private
 
