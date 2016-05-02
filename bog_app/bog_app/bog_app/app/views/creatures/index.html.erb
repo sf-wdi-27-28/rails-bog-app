@@ -1,0 +1,18 @@
+<!-- app/views/creatures/index.html.erb -->
+
+<div class="container">
+
+  <h1>Rails Bog App Fourth Run Through!!</h1>
+  <hr>
+
+  <% @creatures.each do |creature| %>
+    <h3>
+      <strong>Name: </strong> <%= creature.name %>
+    </h3>
+
+    <h4>
+      <strong>Description: </strong> <%= creature.description %>
+    </h4>
+  <% end %>
+
+</div>
