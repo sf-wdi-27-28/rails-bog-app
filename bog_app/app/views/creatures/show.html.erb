@@ -1,5 +1,6 @@
 
 <p> <h1> <%= @creature.name %> </h1> </p>
 <p> <h4><i> <%= @creature.description %> </i></h4><p>
-
+<p><%= button_to "Delete", @creature, method: :delete %></p>
+<p><%= button_to "Edit", edit_creature_path, method: :get%></p>
 <%= link_to "Back", creatures_path %>

@@ -11,9 +11,10 @@ Rails.application.routes.draw do
 
   get '/creatures/:id/edit', to: "creatures#edit", as: "edit_creature"
 
-  patch '/creatures/:id', to: "creature#update"
+  patch '/creatures/:id', to: "creatures#update"
 
-  get '/creatures/destroy'
+  delete '/creatures/:id', to: "creatures#destroy"
+  
 
 
 end
