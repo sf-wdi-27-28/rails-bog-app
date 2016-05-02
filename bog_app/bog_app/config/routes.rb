@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/creatures/new", to: "creatures#new", as: "new_creature"
   post "/creatures", to: "creatures#create"
   get "/creatures/:id", to: "creatures#show", as: "creature"
-  patch
+  get "/creatures/:id/edit", to: "creatures#edit", as: "edit_creature"
   delete
-  
+
 end
