@@ -43,7 +43,14 @@ class CreaturesController < ApplicationController
 
     if creature.save
       redirect_to creature_path(creature)
-    end 
+    end
+  end
 
+  def destroy
+    creature = Creature.find(params[:id])
+
+    creature.destroy
+
+    redirect_to creatures_path
   end
 end
