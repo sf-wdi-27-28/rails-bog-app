@@ -1,0 +1,8 @@
+<h3>New Creature Form</h3>
+<%= form_for @creature do |f| %>
+  <strong>Name:</strong><br>
+  <%= f.text_field :name %><br><br>
+  <strong>Description:</strong><br>
+  <%= f.text_field :description %><br><br>
+  <%= f.submit %>
+<% end %>
