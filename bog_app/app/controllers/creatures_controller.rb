@@ -12,7 +12,7 @@ class CreaturesController < ApplicationController
 
   def create
 
-    creature_params = params.require(:creature).permit(:name, :description)
+    creature_params = params.require(:creature).permit(:name, :description, :image)
 
     creature = Creature.new(creature_params)
 
@@ -37,7 +37,7 @@ class CreaturesController < ApplicationController
 
     creature = Creature.find(params[:id])
 
-    creature_params = params.require(:creature).permit(:name, :description)
+    creature_params = params.require(:creature).permit(:name, :description, :image)
 
     creature.update(creature_params)
 

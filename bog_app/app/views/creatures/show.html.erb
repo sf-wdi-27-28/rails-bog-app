@@ -12,6 +12,7 @@
 <h2>Creature Feature</h2>
 
 <div>
+  <%= image_tag @creature.image.url(:medium) %><br>
   <strong>Name:</strong> <%= @creature.name %><br>
   <strong>Description:</strong> <%= @creature.description %>
 </div>

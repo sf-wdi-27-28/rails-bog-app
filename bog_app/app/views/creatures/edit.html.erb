@@ -10,7 +10,11 @@
 </nav>
 
 <h2>Edit a New Creature</h2>
-<%= form_for @creature do |f| %>
+<%= form_for @creature, html: { multipart: true } do |f| %>
+    <div>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
     <div>
       <%= f.label :name %>
       <%= f.text_field :name %>
