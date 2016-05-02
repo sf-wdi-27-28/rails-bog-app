@@ -7,7 +7,7 @@ class CreaturesController < ApplicationController
   end
 
   def new
-    @creatures = Creature.new
+    @creature = Creature.new
 
     render :new
   end

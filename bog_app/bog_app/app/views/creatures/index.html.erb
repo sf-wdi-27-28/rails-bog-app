@@ -1,4 +1,8 @@
-<%= @creatures.each do |creature| %>
-<%= creature.name %>
-<%= creature.description %>
+<% @creatures.each do |creature| %>
+<p>
+  <ul>
+<li><%= creature.name %><br>
+<%= creature.description %></li>
+ </ul>
+</p>
 <% end %>
