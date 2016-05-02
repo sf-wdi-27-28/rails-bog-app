@@ -14,7 +14,15 @@
       <strong>Description: </strong> <%= creature.description %>
     </h4>
 
-    <%= link_to "Show This Creature", creature_path(creature.id) %>
+    <%= link_to "Show This Creature", creature_path(creature.id) %><br>
+    
+    <%= link_to "Edit", edit_creature_path(creature.id) %>
+    <hr>
+
   <% end %>
+
+  <hr>
+
+  <%= link_to "Create New Creature", "/creatures/new" %>
 
 </div>
