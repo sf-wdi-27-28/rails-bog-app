@@ -1,0 +1,23 @@
+
+<nav class="navbar navbar-default navbar-fixed top">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/creatures/new">Add Creature</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h2>Creatures List</h2>
+
+<% @creatures.each do |creature| %>
+    <p>
+      <strong>Name:</strong><%= image_tag creature.image.url(:thumb) %><br>
+      <strong>Name:</strong> <%= creature.name %><br>
+      <strong>Description:</strong> <%= creature.description %>
+    </p>
+    <%= link_to "<button>Show</button>".html_safe, creature_path(creature), :id => "button_id", :class => "button_class" %>
+    <%= link_to "<button>Edit</button>".html_safe, edit_creature_path(creature), :id => "button_id", :class => "button_class" %>
+<% end %>
