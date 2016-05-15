@@ -1,0 +1,12 @@
+<h1>All Creatures</h1>
+  <% @creatures.each do |creature| %>
+  <h4><strong>Name:</strong> <%= creature.name %></h4>
+  <strong>Description:</strong>
+  <p><%= creature.description %></p>
+  <%= link_to 'Show', creature %>
+  <%= link_to 'Edit', edit_creature_path(creature) %>
+  <%= link_to 'Destroy', creature, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br />
+  <% end %>
+<br>
+<%= link_to 'New Creature', new_creature_path %>
