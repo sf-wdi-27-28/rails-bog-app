@@ -1,0 +1,17 @@
+<!-- app/views/creatures/show.html.erb -->
+
+<div class="container">
+
+  <h1>Show One Creature</h1>
+  <hr>
+
+  <h2><strong>Name: <%= @creature.name %> </h2><br/>
+
+  <h4><strong>Description: <%= @creature.description %> </h4><br/>
+
+  <hr>
+
+  <%= link_to "Back", creatures_path %><br>
+
+  <%= button_to "Delete", @creature, method: :delete %>
+</div>
