@@ -1,0 +1,23 @@
+<br>
+  <div class="well col-sm-6 col-sm-offset-3">
+    <h2>Editing Creature: <%= @creature.name  %> </h2>
+    <%= form_for(@creature) do |f| %>
+
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :description %><br>
+        <%= f.text_field :description %>
+      </div>
+      <br>
+      <div>
+        <%= f.submit %>
+      </div>
+
+    <% end %>
+  </div>
+  <div class="col-sm-6 col-sm-offset-3">
+    <%= link_to "Back", creatures_path %>
+  </div>
