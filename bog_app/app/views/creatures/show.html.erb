@@ -1,0 +1,4 @@
+<!-- creature show page app/view/creatures/show.html.erb-->
+<h1> <%= @creature.name%> </h1>
+<p> <%= @creature.description%> </p>
+<%= button_to "Delete", @creature, method: :delete %>
