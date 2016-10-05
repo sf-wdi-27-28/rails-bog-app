@@ -1,0 +1,11 @@
+<h3>Creature List</h3>
+<% @creatures.each do |creature| %>
+  <strong>Name:</strong><br><br>
+  <%= creature.name %><br><br>
+  <strong>Description:</strong><br><br>
+  <%= creature.description%><br><br>
+  <%= link_to "Show Creature Info", creature_path(creature) %>
+  <hr>
+<% end %>
+<br>
+<%= link_to "Create New Creature", new_creature_path %>
