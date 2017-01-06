@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BogApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class = "col-xs-10 col-xs-offset-1">
+      <div class = "row">
+        <h1>Bog Blog</h1>
+      </div>
+      <div class = "row">
+        <h3><em>being made over and over again since 2016</em></h3>
+      </div>
+      <div class = "row">
+        <hr />
+      </div>
+
+      <%= yield %>
+
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>

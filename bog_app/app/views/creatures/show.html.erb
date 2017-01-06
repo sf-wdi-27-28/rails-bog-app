@@ -1,0 +1,11 @@
+
+<div class = "row">
+  <h2><%= @creature.name %></h2>
+</div>
+<div class = "row">
+  <p><em><%= @creature.description %></em></p>
+</div>
+<div class = "row">
+  <%= button_to "Edit", edit_creature_path(@creature), method: "get", class: "btn btn-warning" %>
+  <%= button_to "Delete", creature_path(@creature), method: "delete", class: "btn btn-danger" %>
+</div>
